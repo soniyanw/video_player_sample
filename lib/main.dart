@@ -1,32 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:video_player_sample/views/videoscreen.dart';
+import 'package:play/play.dart';
+import 'package:video_player_sample/views/play_package_github_example.dart';
 
-void main() {
+void main() async {
+  await playInitialize();
+
   runApp(const MaterialApp(
-    home: HomePage(),
+    home: MainPage(),
   ));
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Video Player"),
-      ),
-      body: Center(
-        child: Container(
-          child: MaterialButton(
-            onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => VideoScreen()));
-            },
-            child: Text("Play Video"),
-          ),
-        ),
-      ),
-    );
-  }
 }

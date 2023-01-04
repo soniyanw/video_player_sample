@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:video_player_sample/views/videoplayer.dart';
+import 'package:video_player_sample/views/video_player_playpage.dart';
 
 class VideoScreen extends StatefulWidget {
   const VideoScreen({Key? key}) : super(key: key);
