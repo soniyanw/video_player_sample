@@ -4,6 +4,14 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:play/play.dart';
 
+void main() async {
+  await playInitialize();
+
+  runApp(const MaterialApp(
+    home: MainPage(),
+  ));
+}
+
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
 
