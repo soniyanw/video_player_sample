@@ -4,12 +4,12 @@ import 'package:video_player/video_player.dart';
 
 void main() {
   runApp(const MaterialApp(
-    home: HomePage(),
+    home: HomePagePlayer(),
   ));
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePagePlayer extends StatelessWidget {
+  const HomePagePlayer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -85,7 +85,7 @@ class _PlayerState extends State<Player> {
     return (_controller != null)
         ? Column(
             children: [
-              ((_controller!.value.isInitialized)
+              ((_controller!.value.initialized)
                   ? AspectRatio(
                       aspectRatio: _controller!.value.aspectRatio,
                       child: VideoPlayer(_controller!),

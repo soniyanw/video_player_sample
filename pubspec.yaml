@@ -39,17 +39,19 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  #kraken_video_player: ^2.5.0
-  play: ^0.0.15
-  #miniplayer: ^1.0.1
-  #file_picker: ^5.2.3
-  video_player: ^2.4.4
-  file_picker: ^5.2.4
-  miniplayer: ^1.0.1
-  video_player_platform_interface_extra: ^5.0.1+1
+  play:
+  file_picker:
+  miniplayer:
+  video_player_platform_interface_extra:
   kraken_video_player:
 dependency_overrides:
-  ffi: 2.0.1
+  video_player_platform_interface : ^5.1.1
+  ffi: ^2.0.1
+  video_player:
+    git:
+      url: https://github.com/cbenhagen/plugins.git
+      path: packages/video_player/video_player
+      ref: video_player_macos
 
 
 
